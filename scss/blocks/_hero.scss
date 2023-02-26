@@ -1,5 +1,6 @@
 .hero {
-  margin-top: 128px;
+  margin-top: 104px;
+  padding-top: 24px;
   margin-bottom: 36px;
 }
 .hero__container {
@@ -58,6 +59,6 @@
 }
 @media (max-width: 480px) {
   .hero{
-    margin-top: 98px;
+    margin-top: 74px;
   }
 }

@@ -1,0 +1,147 @@
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.header__wrapper{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 30;
+  background-color: $prim;
+  color: #fff;
+}
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 104px;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+.logo__img{
+  display: inline-block;
+  color: #fff;
+  margin-right: 22px;
+  width: 180px;
+}
+.logo__descr {
+  width: 150px;
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: - 0.84%;
+  span{
+    margin-left: -8px;
+  }
+}
+.header__phone {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  span{
+    font-size: 16px;
+    line-height: 1.5;
+    border-bottom: 1px dashed #FFFFFF;
+  }
+}
+.phone__link {
+  color: #fff;
+  font-size: 30px;
+  line-height: 1.5;
+  margin-right: 8px;
+  transition: all 0.3s;
+  &:hover{
+    opacity: 0.7;
+  }
+}
+.header__social {
+  display: flex;
+}
+.social-phone {
+  display: none;
+}
+.social-icon{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-left: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+._icon-phone {
+  color: $prim;
+}
+.social-facebook, .social-telegram, ._icon-phone {
+  transition: all 0.3s;
+}
+.social-facebook:hover, .social-telegram:hover, ._icon-phone:hover {
+  opacity: 0.7;
+}
+.social-telegram {
+  background-color: #ffffff;
+  color: rgba(0, 139, 170, 0.5);
+}
+
+@media (max-width: 992px) {
+  .header__phone{
+    flex-direction: column;
+  }
+  .phone__link{
+    font-size: calc(20px + (30 - 24) * ((100vw - 480px) / (991 - 480)));
+  }
+}
+
+@media (max-width: 767px) {
+  .logo__img{
+    width: calc(120px + (180 - 120) * ((100vw - 480px) / (767 - 480)));
+    img{
+      width: 100%;
+    }
+  }
+  .phone__link{
+    font-size: 24px;
+  }
+  .logo__descr{
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__container{
+    height: 74px;
+  }
+  .logo__img{
+    width: 120px;
+  }
+  .phone__link{
+    font-size: 20px;
+  }
+  .header__phone{
+    display: none;
+  }
+  .social-phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+  .social-icon{
+    width: 24px;
+    height: 24px;
+  }
+  .social-facebook img{
+    width: 100%;
+  }
+  .social-telegram img{
+    width: 14px;
+  }
+}

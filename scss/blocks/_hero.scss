@@ -1,0 +1,63 @@
+.hero {
+  margin-top: 128px;
+  margin-bottom: 36px;
+}
+.hero__container {
+  margin: 0 auto;
+  height: 553px;
+  position: relative;
+  &::before{
+    content: "";
+    position: absolute;
+    background: url(../../images/hero-bg-shadow.svg) no-repeat center;
+    background-size: cover;
+    bottom: 0;
+    left: 60%;
+    height: 65px;
+    width: 40%;
+    z-index: 3;
+  }
+}
+.hero__action {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: rgba(255, 242, 0, 0.7);
+  left: 32px;
+  bottom: 32px;
+  z-index: 3;
+  padding: 45px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  font-family: 'Trebuchet MS';
+  font-weight: 700;
+}
+.hero-action__title {
+  font-size: 25px;
+}
+.hero-action__index-number {
+  font-size: 24px;
+  color: #fff;
+  background-color: #000;
+}
+
+
+@media (max-width: 992px) {
+  .hero__container{
+    height: calc(400px + (553 - 400) * ((100vw - 480px) / (992 - 480)));
+  }
+  .hero__container::before{
+    left: calc(50% + (60 - 50) * ((100vw - 767px) / (992 - 767)));
+    width: calc(50% + (40 - 50) * ((100vw - 767px) / (992 - 767)));
+    height: calc(60px + (65 - 60) * ((100vw - 767px) / (992 - 767)));
+  }
+}
+@media (max-width: 480px) {
+  .hero{
+    margin-top: 98px;
+  }
+}

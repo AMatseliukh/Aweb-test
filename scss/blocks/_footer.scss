@@ -1,0 +1,36 @@
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+.footer_task{
+  display: inline-block;
+  font-size: 12px;
+  text-align: left;
+  .footer_company{
+    color: $prim;
+    border-bottom: 1px solid rgba(0, 89, 172, 0.25);
+    transition: all 0.3s;
+    &:hover{
+      background-color:rgb(0, 89, 172, 0.8);
+      color: #fff;
+    }
+  }
+}
+.footer__social {
+  display: flex;
+}
+.footer__facebook, .footer__telegram{
+  transition: all 0.3s;
+}
+.footer__facebook:hover, .footer__telegram:hover{
+  opacity: 0.5;
+}
+
+@media (max-width: 767px){
+  .footer_task{
+    max-width: 300px;
+  }
+  
+}
